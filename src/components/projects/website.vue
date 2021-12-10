@@ -28,22 +28,11 @@
             </q-btn>
           </div>
           <div class="col-12 col-md-8 col-lg-6 q-pa-md">
-            <q-carousel
-              animated
-              v-model="imageSlide"
-              infinite
-              :autoplay="autoplay"
-              arrows
-              transition-prev="slide-right"
-              transition-next="slide-left"
-              @mouseenter="autoplay = false"
-              @mouseleave="autoplay = true"
-            >
-              <q-carousel-slide :name="1" img-src="https://cdn.quasar.dev/img/mountains.jpg" />
-              <q-carousel-slide :name="2" img-src="https://cdn.quasar.dev/img/parallax1.jpg" />
-              <q-carousel-slide :name="3" img-src="https://cdn.quasar.dev/img/parallax2.jpg" />
-              <q-carousel-slide :name="4" img-src="https://cdn.quasar.dev/img/quasar.jpg" />
-            </q-carousel>
+            <q-img src="https://cdn.quasar.dev/img/mountains.jpg">
+              <div class="absolute-bottom text-subtitle1 text-center">
+                Caption
+              </div>
+            </q-img>
           </div>
         </div>
       </q-carousel-slide>
@@ -73,7 +62,6 @@ export default {
       autoplay: ref(false),
       imageSlide: ref(1),
       slide: ref('jobsharmal'),
-      lorem: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque voluptatem totam, architecto cupiditate officia rerum, error dignissimos praesentium libero ab nemo provident incidunt ducimus iusto perferendis porro earum. Totam, numquam?'
     }
   }
 }

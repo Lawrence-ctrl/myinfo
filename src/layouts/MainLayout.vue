@@ -1,5 +1,17 @@
 <template>
   <q-layout view="hHh Lpr lFf">
+    <q-header reveal elevated>
+      <div class="container">
+        <q-toolbar class="q-py-md">
+          <q-toolbar-title>MyInfo</q-toolbar-title>
+
+           <q-btn flat @click="scrollToElement('home')">Home</q-btn>
+           <q-btn flat @click="scrollToElement('about')">About</q-btn>
+           <q-btn flat @click="scrollToElement('projects')">Projects</q-btn>
+           <q-btn flat @click="scrollToElement('contact')">Contact</q-btn>
+        </q-toolbar>
+      </div>
+    </q-header>
     <q-drawer
       class="lt-md"
       v-model="leftDrawerOpen"
@@ -15,7 +27,7 @@
     </q-drawer>
 
     <q-page-container>
-      <router-view />
+      <router-view :link="link"/>
     </q-page-container>
   </q-layout>
 </template>
@@ -29,9 +41,16 @@ export default defineComponent({
   name: 'MainLayout',
 
   setup () {
-    const leftDrawerOpen = ref(false)
+    const link = ref(null);
+    const leftDrawerOpen = ref(false);
+
+    function scrollToElement(url) {
+      link.value = url;
+    }
 
     return {
+      link,
+      scrollToElement,
       leftDrawerOpen,
       toggleLeftDrawer () {
         leftDrawerOpen.value = !leftDrawerOpen.value
@@ -40,3 +59,11 @@ export default defineComponent({
   }
 })
 </script>
+
+<style scoped>
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+</style>

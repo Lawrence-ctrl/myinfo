@@ -1,6 +1,6 @@
 <template>
   <q-page>
-    <div class="home">
+    <div class="home" ref="home">
       <div class="container">
         <div class="row items-center justify-center">
           <div class="col-12 col-sm-8 col-md-12">
@@ -27,7 +27,7 @@
       </div>
     </div>
 
-    <div class="about">
+    <div class="about" ref="about">
       <div class="container">
         <div class="text-h5 text-weight-bold text-center q-pb-lg">About Me</div>
         <div class="row items-center justify-center">
@@ -75,7 +75,7 @@
       </div>
     </div>
 
-    <div class="projects">
+    <div class="projects" ref="projects">
       <div class="container">
         <Projects />
       </div>
@@ -107,7 +107,7 @@
                 <div class="text-h6 text-primary">YCDC</div>
                 <ul>
                   <li>Junior Web Developer</li>
-                  <li>Oct 2019 - Dec 2019 (Internship)</li>
+                  <li>June 2019 - July 2019 (Internship)</li>
                 </ul>
               </q-card-section>
             </q-card>
@@ -151,36 +151,83 @@
       </div>
     </div>
 
+    <div class="contact-me" ref="contact">
+      <div class="container">
+        <div class="text-h5 text-weight-bold text-center q-pb-xl">Contact Me</div>
+        <div class="row justify-center q-col-gutter-lg">
+          <div class="col-12 col-sm-8 col-md-4 text-center">
+            <q-icon size="lg" name="mail"/>
+            <div class="text-subtitle1 text-weight-bold q-mt-lg text-center">
+              thutayarmoe97@gmail.com
+            </div>
+          </div>
+          <div class="col-12 col-sm-8 col-md-4 text-center">
+            <q-icon size="lg" name="phone"/>
+            <div class="text-subtitle1 text-weight-bold q-mt-lg text-center">
+              +959 972 089 188
+            </div>
+          </div>
+          <div class="col-12 col-sm-8 col-md-4 text-center">
+            <q-icon size="lg" name="place"/>
+            <div class="text-subtitle1 text-weight-bold q-mt-lg text-center">
+              No.(25), Bozinyaw 3rd street, 30 Quarter, North Dagon, Yangon.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <q-toolbar class="bg-white text-dark text-center q-pa-lg">
+      <q-toolbar-title>All right reserved. Thuta Yar Moe</q-toolbar-title>
+    </q-toolbar>
+
   </q-page>
 </template>
 
 <script>
 import Projects from 'src/components/projects.vue';
-import { defineComponent, ref } from 'vue';
+import { defineComponent, ref, watch } from 'vue';
 
 export default defineComponent({
   name: 'PageIndex',
   components: {
     Projects
   },
-  setup() {
-    let technical = [
-      { id: 1, name: 'Vue.js', percent: 0.8 },
-      { id: 2, name: 'Nuxt JS', percent: 0.7 },
-      { id: 3, name: 'Quasar', percent: 0.75 },
-      { id: 4, name: 'Laravel', percent: 0.8 },
-      { id: 5, name: 'PHP', percent: 0.78 },
-      { id: 6, name: 'Javascript', percent: 0.73 },
-    ];
-    let professional = [
-      { id: 1, name: 'Teamwork', percent: 0.8 },
-      { id: 2, name: 'Problem Solving', percent: 0.7 },
-      { id: 3, name: 'Communication', percent: 0.6 },
-      { id: 4, name: 'Creativity', percent: 0.75 },
-    ];
+  props: {
+    link: String
+  },
+  data() {
     return {
-      technical: ref(technical),
-      professional: ref(professional)
+      technical: [
+        { id: 1, name: 'Vue.js', percent: 0.8 },
+        { id: 2, name: 'Nuxt JS', percent: 0.7 },
+        { id: 3, name: 'Quasar', percent: 0.75 },
+        { id: 4, name: 'Laravel', percent: 0.8 },
+        { id: 5, name: 'PHP', percent: 0.78 },
+        { id: 6, name: 'Javascript', percent: 0.73 },
+      ],
+      professional: [
+        { id: 1, name: 'Teamwork', percent: 0.8 },
+        { id: 2, name: 'Problem Solving', percent: 0.7 },
+        { id: 3, name: 'Communication', percent: 0.6 },
+        { id: 4, name: 'Creativity', percent: 0.75 },
+      ]
+    }
+  },
+  methods: {
+    scrollToElement(val) {
+    const el = this.$refs[val];
+
+    if (el) {
+      el.scrollIntoView({behavior: 'smooth'});
+    }
+  }
+  },
+  watch: {
+    link(val) {
+      if (val) {
+        this.scrollToElement(val);
+      }
     }
   }
 })
@@ -221,6 +268,12 @@ export default defineComponent({
     width: 100%;
     padding: 120px 0px;
     background: #efefef;
+  }
+
+  .contact-me {
+    width: 100%;
+    padding: 120px 0px;
+    background: #ffffff;
   }
 
   .work-experience > li {
