@@ -3,25 +3,29 @@
     <div class="home" ref="home">
       <div class="container">
         <div class="row items-center justify-center">
-          <div class="col-12 col-sm-8 col-md-12">
+          <div class="col-sm-12 col-md-6">
             <div class="hello bg-primary">Hello I'm</div>
             <div class="name">THUTA YAR MOE</div>
             <div class="profession">Web Developer</div>
-            <div class="text-body1 q-mb-sm">
+            <div class="text-body1 q-mb-sm my-info">
               <q-icon name="mail" size="sm" class="q-mr-md" color="primary"/>
-              thutayarmoe97@gmail.com
+              <label>thutayarmoe97@gmail.com</label>
             </div>
-            <div class="text-body1 q-mb-sm">
+            <div class="text-body1 q-mb-sm my-info">
               <q-icon name="phone" size="sm" class="q-mr-md" color="primary"/>
-              +959 972 089 188
+              <label>+959 972 089 188</label>
             </div>
-            <div class="text-body1 q-mb-sm">
+            <div class="text-body1 q-mb-sm my-info">
               <q-icon name="place" size="sm" class="q-mr-md" color="primary"/>
-              No.(25), Bozinyaw 3rd street, 30 Quarter, North Dagon, Yangon.
+              <label>No.(25), Bozinyaw 3rd street, 30 Quarter, North Dagon, Yangon.</label>
             </div>
           </div>
-          <div class="col-6">
-
+          <div class="col-md-6 col-sm-12">
+            <div class="profile">
+              <q-avatar>
+              <img src="https://cdn.quasar.dev/img/avatar.png">
+            </q-avatar>
+            </div>
           </div>
         </div>
       </div>
@@ -29,24 +33,24 @@
 
     <div class="about" ref="about">
       <div class="container">
-        <div class="text-h5 text-weight-bold text-center q-pb-lg">About Me</div>
+        <div class="text-h4 text-center text-weight-bolder q-pb-lg">“ About Me ”</div>
         <div class="row items-center justify-center">
           <div class="col-12 col-sm-8">
-            <div class="text-body1 text-weight-light ">
+            <div class="text-body1">
               Hi! I'm Thuta Yar Moe. I'm a Backend Developer.
               I studied Information Technology and graduated with bachelor of engineering (IT) from Technological University (Hmawbi).
               I'm very passionate and dedicated to my work. I enjoy every step of the development process, from discussion and collaboration.
               I have many experiences in website and mobile application development. I am good at
             </div>
             <div class="languages q-py-md">
-              <q-chip outline square class="q-pa-md" size="md" color="primary" text-color="white">Vue.js</q-chip>
-              <q-chip outline square class="q-pa-md" size="md" color="primary" text-color="white">NuxtJS</q-chip>
-              <q-chip outline square class="q-pa-md" size="md" color="primary" text-color="white">Quasar</q-chip>
-              <q-chip outline square class="q-pa-md" size="md" color="primary" text-color="white">Laravel</q-chip>
-              <q-chip outline square class="q-pa-md" size="md" color="primary" text-color="white">PHP</q-chip>
-              <q-chip outline square class="q-pa-md" size="md" color="primary" text-color="white">MySQL</q-chip>
-              <q-chip outline square class="q-pa-md" size="md" color="primary" text-color="white">NGINX</q-chip>
-              <q-chip outline square class="q-pa-md" size="md" color="primary" text-color="white">Digital Ocean</q-chip>
+              <q-chip square class="q-pa-md" size="md" color="primary" text-color="white">Vue.js</q-chip>
+              <q-chip square class="q-pa-md" size="md" color="primary" text-color="white">NuxtJS</q-chip>
+              <q-chip square class="q-pa-md" size="md" color="primary" text-color="white">Quasar</q-chip>
+              <q-chip square class="q-pa-md" size="md" color="primary" text-color="white">Laravel</q-chip>
+              <q-chip square class="q-pa-md" size="md" color="primary" text-color="white">PHP</q-chip>
+              <q-chip square class="q-pa-md" size="md" color="primary" text-color="white">MySQL</q-chip>
+              <q-chip square class="q-pa-md" size="md" color="primary" text-color="white">NGINX</q-chip>
+              <q-chip square class="q-pa-md" size="md" color="primary" text-color="white">Digital Ocean</q-chip>
             </div>
           </div>
         </div>
@@ -55,7 +59,7 @@
 
     <div class="whatido">
       <div class="container">
-        <div class="text-h5 text-weight-bold text-center q-pb-xl">What I Do</div>
+        <div class="text-h4 text-center text-weight-bolder q-pb-xl">What I Do</div>
         <div class="row justify-center q-col-gutter-lg">
           <div class="col-12 col-sm-8 col-md-6">
             <q-card class="what-i-do text-center shadow-9">
@@ -85,12 +89,32 @@
       <div class="container">
         <div class="row justify-center q-col-gutter-x-lg">
           <div class="col-12 col-sm-8 col-md-5 q-mx-md q-mb-lg">
-            <div class="text-h5 text-weight-bold text-center q-pb-xl">Technical Skills</div>
-            <q-linear-progress v-for="tech in technical" :key="tech.id" :value="tech.percent" class="q-mt-md" />
+            <div class="text-h4 text-weight-bolder text-center q-pb-xl">Technical Skills</div>
+            <div v-for="tech in technical" :key="tech.id">
+              <div class="row">
+                <div class="col-6 text-dark text-weight-bold tech-name">
+                  Vue
+                </div>
+                <div class="col-6 text-right tech-value text-medium text-weight-bold">
+                  80%
+                </div>
+              </div>
+              <q-linear-progress size="6px" :value="tech.percent" class="q-mt-sm q-mb-md" />
+            </div>
           </div>
           <div class="col-12 col-sm-8 col-md-5 q-mx-md">
-            <div class="text-h5 text-weight-bold text-center q-pb-xl">Professional Skills</div>
-            <q-linear-progress v-for="pro in professional" :key="pro.id" :value="pro.percent" class="q-mt-md" />
+            <div class="text-h4 text-weight-bolder text-center q-pb-xl">Professional Skills</div>
+            <div v-for="pro in professional" :key="pro.id">
+              <div class="row">
+                <div class="col-6 text-dark text-weight-bold tech-name">
+                  Vue
+                </div>
+                <div class="col-6 text-right tech-value text-medium text-weight-bold">
+                  80%
+                </div>
+              </div>
+              <q-linear-progress size="6px" :value="pro.percent" class="q-mt-sm q-mb-md" />
+            </div>
           </div>
         </div>
       </div>
@@ -100,49 +124,49 @@
       <div class="container">
         <div class="row justify-center q-col-gutter-x-lg">
           <div class="col-12 col-sm-8 col-md-6 q-mb-lg">
-            <div class="text-h5 text-weight-bold text-center q-pb-xl">Work Experience</div>
+            <div class="text-h4 text-weight-bolder text-center q-pb-xl">Work Experience</div>
 
-            <q-card class="q-mb-lg shadow-5">
+            <q-card class="q-mb-lg q-pa-sm shadow-5">
               <q-card-section>
-                <div class="text-h6 text-primary">YCDC</div>
+                <div class="text-h6 text-primary text-weight-bolder">YCDC</div>
                 <ul>
-                  <li>Junior Web Developer</li>
-                  <li>June 2019 - July 2019 (Internship)</li>
+                  <li class="text-weight-bold">Junior Web Developer</li>
+                  <li class="text-weight-bold">June 2019 - July 2019 (Internship)</li>
                 </ul>
               </q-card-section>
             </q-card>
 
-            <q-card class="q-mb-lg shadow-5">
+            <q-card class="q-mb-lg q-pa-sm shadow-5">
               <q-card-section>
-                <div class="text-h6 text-primary">CGM</div>
+                <div class="text-h6 text-primary text-weight-bolder">CGM</div>
                 <ul>
-                  <li>Junior Web Developer</li>
-                  <li>Feb 2020 - May 2020 (Quit because of COVID 19)</li>
+                  <li class="text-weight-bold">Junior Web Developer</li>
+                  <li class="text-weight-bold">Feb 2020 - May 2020 (Quit because of COVID 19)</li>
                 </ul>
               </q-card-section>
             </q-card>
 
-            <q-card class="q-mb-lg shadow-5">
+            <q-card class="q-mb-lg q-pa-sm shadow-5">
               <q-card-section>
-                <div class="text-h6 text-primary">Datalink</div>
+                <div class="text-h6 text-primary text-weight-bolder">Datalink</div>
                  <ul>
-                  <li>Web Developer</li>
-                  <li>July 2020 - July 2021</li>
+                  <li class="text-weight-bold">Web Developer</li>
+                  <li class="text-weight-bold">July 2020 - July 2021</li>
                 </ul>
               </q-card-section>
             </q-card>
 
           </div>
           <div class="col-12 col-sm-8 col-md-6">
-            <div class="text-h5 text-weight-bold text-center q-pb-xl">Education</div>
+            <div class="text-h4 text-weight-bolder text-center q-pb-xl">Education</div>
 
-            <q-card class="q-mb-lg shadow-5">
+            <q-card class="q-mb-lg q-pa-sm shadow-5">
               <q-card-section>
-                <div class="text-h6 text-primary">Technological University (HMAWBI)</div>
+                <div class="text-h6 text-primary text-weight-bolder">Technological University (HMAWBI)</div>
                 <ul>
-                  <li>2013 - 2019</li>
-                  <li>Bachelor of Technology (IT)</li>
-                  <li>Bachelor of Engineering (IT)</li>
+                  <li class="text-weight-bold">2013 - 2019</li>
+                  <li class="text-weight-bold">Bachelor of Technology (IT)</li>
+                  <li class="text-weight-bold">Bachelor of Engineering (IT)</li>
                 </ul>
               </q-card-section>
             </q-card>
@@ -153,7 +177,7 @@
 
     <div class="contact-me" ref="contact">
       <div class="container">
-        <div class="text-h5 text-weight-bold text-center q-pb-xl">Contact Me</div>
+        <div class="text-h4 text-weight-bolder text-center q-pb-xl contact-title">Contact Me</div>
         <div class="row justify-center q-col-gutter-lg">
           <div class="col-12 col-sm-8 col-md-4 text-center">
             <q-icon size="lg" name="mail"/>
@@ -173,12 +197,13 @@
               No.(25), Bozinyaw 3rd street, 30 Quarter, North Dagon, Yangon.
             </div>
           </div>
+          <hr/>
         </div>
       </div>
     </div>
 
-    <q-toolbar class="bg-white text-dark text-center q-pa-lg">
-      <q-toolbar-title>All right reserved. Thuta Yar Moe</q-toolbar-title>
+    <q-toolbar class="bg-primary text-dark text-center q-pa-lg">
+      <q-toolbar-title class="text-dark text-subtitle1 text-weight-bold">All right reserved. Thuta Yar Moe</q-toolbar-title>
     </q-toolbar>
 
   </q-page>
@@ -233,47 +258,38 @@ export default defineComponent({
 })
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
   .home {
     width: 100%;
-    padding: 120px 0px;
-    background: url('/assets/');
-  }
-
-  .about {
-    width: 100%;
-    padding: 120px 0px;
+    padding: 100px 0px;
     background: #efefef;
   }
 
-  .whatido {
+  .about, .projects, .work-experience {
     width: 100%;
-    padding: 0px 0px 120px 0px;
-    background: #efefef;
+    padding: 90px 0px;
+    background: #fff;
   }
 
-  .projects {
+  .whatido, .skills {
     width: 100%;
-    padding: 120px 0px;
-    background: #ffffff;
-  }
-
-  .skills {
-    width: 100%;
-    padding: 120px 0px;
-    background: #ffffff;
-  }
-
-  .work-experience {
-    width: 100%;
-    padding: 120px 0px;
+    padding: 90px 0px;
     background: #efefef;
   }
 
   .contact-me {
     width: 100%;
-    padding: 120px 0px;
-    background: #ffffff;
+    padding: 90px 0px 0px;
+    background: #2e8eaf;
+    .contact-title { 
+      margin-bottom: 40px;
+    }
+    hr {
+      width: 100%;
+      margin-top: 50px;
+      background: #000;
+      padding: 0px !important;
+    }
   }
 
   .work-experience > li {
@@ -303,25 +319,79 @@ export default defineComponent({
   }
 
   .name {
-    font-size: 50px;
-    font-weight: 700;
-    line-height: 65px;
-    margin-top: 10px;
-    margin-bottom: 15px;
-    opacity: .6;
+    font-size: 46px;
+    font-weight: bold !important;
     color: #000;
+    margin: 20px 0 8px;
   }
 
   .profession {
-    font-size: 26px;
-    line-height: 34px;
-    margin-bottom: 40px;
-    opacity: .8;
-    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 24px;
+    color: #707070;
+    font-weight: bold;
   }
 
   .what-i-do {
     padding: 40px;
     font-size: 25px;
+  }
+  .profile {
+    .q-avatar {
+      width: 250px;
+      height: 250px;
+      margin: auto;
+      display: block;
+      border: 3px solid #2c9982;
+      overflow: hidden;
+      box-shadow: 0px 3px 6px rgba(0,0,0,0.16);
+    }
+  }
+
+  .my-info {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+    .q-icon {
+      font-size: 20px !important;
+      line-height: 20px;
+    }
+    label {
+      font-size: 15px;
+      line-height: 20px;
+      font-weight: normal !important;
+      color: #000;
+    }
+  }
+
+  .text-body1 {
+    color: #000;
+    font-weight: 500 !important;
+  }
+
+  .q-chip {
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 16px;
+  }
+
+  .q-card {
+    box-shadow: none !important;
+    border: 2px solid #2e8eaf;
+    // background: none !important;
+    border-radius: 8px;
+  }
+
+  .q-card__section {
+    ul {
+      padding-left: 24px;
+      line-height: 32px;
+      color: #707070;
+      font-size: 15px;
+    }
+  }
+
+  .tech-value {
+    color: #707070;
   }
 </style>

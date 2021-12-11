@@ -86,8 +86,11 @@ module.exports = configure(function (ctx) {
     framework: {
       config: {
         brand: {
-          primary: '#a16055',
+          primary: '#2e8eaf',
           positive: '#42b983',
+          dark: "#000",
+          white: "#fff",
+          medium: "#707070",
         }
       },
 

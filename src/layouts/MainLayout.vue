@@ -1,6 +1,6 @@
 <template>
   <q-layout view="hHh Lpr lFf">
-    <q-header reveal elevated>
+    <q-header elevated>
       <div class="container">
         <q-toolbar class="q-py-md">
           <q-toolbar-title>MyInfo</q-toolbar-title>
@@ -65,5 +65,13 @@ export default defineComponent({
   width: 90%;
   max-width: 1000px;
   margin: 0 auto;
+}
+.q-toolbar__title {
+  font-weight: bold !important;
+  color: #fff !important;
+}
+.q-btn {
+  text-transform: initial !important;
+  color: #fff !important;
 }
 </style>

@@ -10,10 +10,10 @@
     >
       <q-carousel-slide v-for="web in websites" :key="web.label" :name="web.value">
         <div class="row">
-          <div class="col-12 col-md-8 col-lg-6 q-pa-md">
-            <div class="text-h5 text-font-weight-bold q-mb-md">{{ web.name }}</div>
+          <div class="col-12 col-md-6 col-lg-6">
+            <div class="text-h5 text-weight-bold q-mb-md">{{ web.name }}</div>
 
-            <div class="text-body2 q-mb-lg">
+            <div class="text-body2  q-mb-lg">
               {{ web.title }}
             </div>
 
@@ -27,7 +27,7 @@
               Go to Website
             </q-btn>
           </div>
-          <div class="col-12 col-md-8 col-lg-6 q-pa-md">
+          <div class="col-12 col-md-6 col-lg-6">
             <q-img src="https://cdn.quasar.dev/img/mountains.jpg">
               <div class="absolute-bottom text-subtitle1 text-center">
                 Caption

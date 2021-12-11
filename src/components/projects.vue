@@ -1,5 +1,5 @@
 <template>
-  <div class="text-h5 text-weight-bold text-center q-pb-lg">My Projects</div>
+  <div class="text-h4 text-weight-bolder text-center q-pb-lg">My Projects</div>
   <div class="row items-center justify-center">
     <div class="col-12 col-sm-8 col-md-12 q-py-md">
       <q-tabs
@@ -11,9 +11,9 @@
         narrow-indicator
         no-caps
       >
-        <q-tab name="website" label="Website" />
-        <q-tab name="android" label="Android" />
-        <q-tab name="ios" label="Ios" />
+        <q-tab color="dark" name="website" label="Website" />
+        <q-tab color="dark" name="android" label="Android" />
+        <q-tab color="dark" name="ios" label="Ios" />
       </q-tabs>
 
       <q-tab-panels v-model="tab" animated>
