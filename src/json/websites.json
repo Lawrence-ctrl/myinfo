@@ -5,7 +5,9 @@
     "name": "Job Shar Mal",
     "value": "jobsharmal",
     "link": "https://www.jobsharmal.com",
+    "logo": "jobsharmal.svg",
     "languages": ["Vue.js", "Laravel"],
+    "showImg": false,
     "title": "Jobs in Myanmar Application"
   },
   {
@@ -14,7 +16,9 @@
     "name": "Treasure",
     "value": "treasure",
     "link": "https://treasure-d1d31.firebaseapp.com/home",
+    "logo": "treasure.png",
     "languages": ["Angular", "Laravel"],
+    "showImg": false,
     "title": "Real Estate Application"
   },
   {
@@ -23,9 +27,10 @@
     "name": "MM Biz Info",
     "value": "mmbizinfo",
     "link": "https://www.mmbizinfo.com",
+    "logo": "mmbizinfo.png",
     "languages": ["Vue.js", "Chart JS", "Laravel"],
-    "title": "Data for Traders Application",
-    "images": ["  1.png","  2.png","  3.png","  4.png"]
+    "showImg": false,
+    "title": "Data for Traders Application"
   },
   {
     "id": 4,
@@ -33,7 +38,9 @@
     "name": "MM Tamil Matrimony",
     "value": "mmtamilmatrimony",
     "link": "https://www.mmtamilmatrimony.com",
+    "logo": "mmtamilmatrimony.png",
     "languages": ["Angular", "Vue.js", "Laravel"],
+    "showImg": false,
     "title": "Dating Application"
   },
   {
@@ -41,8 +48,10 @@
     "label": 5,
     "name": "Victory – International School",
     "value": "victory",
+    "logo": "victory.png",
     "link": "https://www.victorymm.com",
     "languages": ["NuxtJS", "Laravel"],
+    "showImg": false,
     "title": "School Management Application"
   },
   {
@@ -51,7 +60,11 @@
     "name": "EDUSN – International School",
     "value": "edusn",
     "link": "https://www.edusn-admin.com",
+    "logo": "edusn.svg",
     "languages": ["Vue.js", "Laravel"],
-    "title": "School Management Application"
+    "showImg": false,
+    "title": "School Management Application",
+    "type": "admin",
+    "platform": "Admin Website & Mobile App"
   }
 ]

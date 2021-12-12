@@ -3,7 +3,7 @@
     <div class="home" ref="home">
       <div class="container">
         <div class="row items-center justify-center">
-          <div class="col-sm-12 col-md-6">
+          <div class="col-sm-12 col-md-6" :class="$q.screen.lt.sm ? 'q-mb-xl': ''">
             <div class="hello bg-primary">Hello I'm</div>
             <div class="name">THUTA YAR MOE</div>
             <div class="profession">Web Developer</div>
@@ -23,8 +23,8 @@
           <div class="col-md-6 col-sm-12">
             <div class="profile">
               <q-avatar>
-              <img src="https://cdn.quasar.dev/img/avatar.png">
-            </q-avatar>
+                <img src="mine.jpg">
+              </q-avatar>
             </div>
           </div>
         </div>
@@ -64,14 +64,26 @@
           <div class="col-12 col-sm-8 col-md-6">
             <q-card class="what-i-do text-center shadow-9">
               <q-card-section>
-                <q-icon name="code" size="xl" class="q-mr-md"/>Web Development
+                <q-avatar size="60px" rounded class="q-mr-sm">
+                  <img src="~/assets/website3.png" />
+                </q-avatar>
+                <div v-if="$q.screen.lt.md">
+                  Web Development
+                </div>
+                <span v-else>Web Development</span>
               </q-card-section>
             </q-card>
           </div>
           <div class="col-12 col-sm-8 col-md-6">
             <q-card class="what-i-do text-center shadow-9">
               <q-card-section>
-                <q-icon name="code" size="xl" class="q-mr-md"/>App Development
+                <q-avatar size="60px" rounded class="q-mr-sm">
+                  <img src="~/assets/app.png" style="object-fit:contain"/>
+                </q-avatar>
+                <div v-if="$q.screen.lt.md">
+                  App Development
+                </div>
+                <span v-else>App Development</span>
               </q-card-section>
             </q-card>
           </div>
@@ -93,10 +105,10 @@
             <div v-for="tech in technical" :key="tech.id">
               <div class="row">
                 <div class="col-6 text-dark text-weight-bold tech-name">
-                  Vue
+                  {{ tech.name }}
                 </div>
                 <div class="col-6 text-right tech-value text-medium text-weight-bold">
-                  80%
+                  {{ tech.percent * 100 }}%
                 </div>
               </div>
               <q-linear-progress size="6px" :value="tech.percent" class="q-mt-sm q-mb-md" />
@@ -107,10 +119,10 @@
             <div v-for="pro in professional" :key="pro.id">
               <div class="row">
                 <div class="col-6 text-dark text-weight-bold tech-name">
-                  Vue
+                  {{ pro.name }}
                 </div>
                 <div class="col-6 text-right tech-value text-medium text-weight-bold">
-                  80%
+                  {{ pro.percent * 100 }}%
                 </div>
               </div>
               <q-linear-progress size="6px" :value="pro.percent" class="q-mt-sm q-mb-md" />
@@ -151,7 +163,7 @@
                 <div class="text-h6 text-primary text-weight-bolder">Datalink</div>
                  <ul>
                   <li class="text-weight-bold">Web Developer</li>
-                  <li class="text-weight-bold">July 2020 - July 2021</li>
+                  <li class="text-weight-bold">June 2020 - July 2021</li>
                 </ul>
               </q-card-section>
             </q-card>
@@ -177,33 +189,44 @@
 
     <div class="contact-me" ref="contact">
       <div class="container">
-        <div class="text-h4 text-weight-bolder text-center q-pb-xl contact-title">Contact Me</div>
-        <div class="row justify-center q-col-gutter-lg">
+        <div class="text-h4 text-weight-bold text-white text-center q-pb-xl contact-title">Contact Me</div>
+        <div class="row justify-center q-col-gutter-lg q-mb-lg">
           <div class="col-12 col-sm-8 col-md-4 text-center">
-            <q-icon size="lg" name="mail"/>
-            <div class="text-subtitle1 text-weight-bold q-mt-lg text-center">
+            <q-icon size="lg" color="white" name="mail"/>
+            <div class="text-subtitle1 text-weight-bold text-white q-mt-lg text-center">
               thutayarmoe97@gmail.com
+            </div>
+            <div class="text-subtitle1 text-weight-bold text-white q-mt-lg text-center">
             </div>
           </div>
           <div class="col-12 col-sm-8 col-md-4 text-center">
-            <q-icon size="lg" name="phone"/>
-            <div class="text-subtitle1 text-weight-bold q-mt-lg text-center">
+            <q-icon size="lg" color="white" name="phone"/>
+            <div class="text-subtitle1 text-weight-bold text-white q-mt-lg text-center">
               +959 972 089 188
             </div>
           </div>
           <div class="col-12 col-sm-8 col-md-4 text-center">
-            <q-icon size="lg" name="place"/>
-            <div class="text-subtitle1 text-weight-bold q-mt-lg text-center">
+            <q-icon size="lg" color="white" name="place"/>
+            <div class="text-subtitle1 text-weight-bold text-white q-mt-lg text-center">
               No.(25), Bozinyaw 3rd street, 30 Quarter, North Dagon, Yangon.
             </div>
           </div>
-          <hr/>
+        </div>
+        <div class="line">
+          <q-separator color="white" inset/>
         </div>
       </div>
     </div>
 
     <q-toolbar class="bg-primary text-dark text-center q-pa-lg">
-      <q-toolbar-title class="text-dark text-subtitle1 text-weight-bold">All right reserved. Thuta Yar Moe</q-toolbar-title>
+      <div class="container">
+        <q-row>
+          <div class="text-dark text-subtitle1 text-weight-bold text-white">All rights reserved. Thuta Yar Moe</div>
+          <q-icon @click="goto('facebook')" name="facebook" size="md" color="white" class="q-ma-md icons"/>
+          <q-icon @click="goto('phone')" name="phone" size="md" color="white" class="q-ma-md icons"/>
+          <q-icon @click="goto('mail')" name="mail" size="md" color="white" class="q-ma-md icons"/>
+        </q-row>
+      </div>
     </q-toolbar>
 
   </q-page>
@@ -241,12 +264,17 @@ export default defineComponent({
   },
   methods: {
     scrollToElement(val) {
-    const el = this.$refs[val];
+      const el = this.$refs[val];
+      if (el) {
+        el.scrollIntoView({behavior: 'smooth'});
+      }
+    },
 
-    if (el) {
-      el.scrollIntoView({behavior: 'smooth'});
+    goto(val) {
+      if (val == 'facebook') window.open('https://www.facebook.com/thuta.yarmoe', '_blank');
+      if (val == 'phone') window.open('tel:+959972089188', '_blank');
+      if (val == 'mail') window.open('https://mail.google.com/mail/?view=cm&fs=1&to=thutayarmoe@icloud.com', '_blank');
     }
-  }
   },
   watch: {
     link(val) {
@@ -281,14 +309,8 @@ export default defineComponent({
     width: 100%;
     padding: 90px 0px 0px;
     background: #2e8eaf;
-    .contact-title { 
+    .contact-title {
       margin-bottom: 40px;
-    }
-    hr {
-      width: 100%;
-      margin-top: 50px;
-      background: #000;
-      padding: 0px !important;
     }
   }
 
@@ -338,11 +360,11 @@ export default defineComponent({
   }
   .profile {
     .q-avatar {
-      width: 250px;
-      height: 250px;
+      width: 300px;
+      height: 300px;
       margin: auto;
       display: block;
-      border: 3px solid #2c9982;
+      border: 3px solid #2e8eaf;
       overflow: hidden;
       box-shadow: 0px 3px 6px rgba(0,0,0,0.16);
     }
@@ -393,5 +415,9 @@ export default defineComponent({
 
   .tech-value {
     color: #707070;
+  }
+
+  .icons {
+    cursor: pointer;
   }
 </style>

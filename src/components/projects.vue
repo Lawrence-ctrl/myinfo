@@ -13,7 +13,7 @@
       >
         <q-tab color="dark" name="website" label="Website" />
         <q-tab color="dark" name="android" label="Android" />
-        <q-tab color="dark" name="ios" label="Ios" />
+        <q-tab color="dark" name="ios" label="IOS" />
       </q-tabs>
 
       <q-tab-panels v-model="tab" animated>
