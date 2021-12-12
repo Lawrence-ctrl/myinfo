@@ -71,7 +71,7 @@
             {{ web.platform }}
           </q-btn>
 
-          <q-btn no-caps color="primary" class="q-mt-md q-mr-sm" v-else @click="goto(web.link)">
+          <q-btn no-caps color="primary" class="q-mt-md q-mr-sm" v-if="web.showLink" @click="goto(web.link)">
             Go to Website
           </q-btn>
 
