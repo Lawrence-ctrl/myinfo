@@ -23,7 +23,7 @@
           <div class="col-md-6 col-sm-12">
             <div class="profile">
               <q-avatar>
-                <img src="mine.jpg">
+                <img src="mine.jpg" class="profile-image">
               </q-avatar>
             </div>
           </div>
@@ -419,5 +419,9 @@ export default defineComponent({
 
   .icons {
     cursor: pointer;
+  }
+
+  .profile-image {
+    object-fit: cover;
   }
 </style>
