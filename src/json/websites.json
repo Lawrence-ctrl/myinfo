@@ -62,14 +62,14 @@
   {
     "id": 6,
     "label": 6,
-    "name": "EDUSN – International School",
+    "name": "EDUSN – Digital School",
     "value": "edusn",
     "link": "https://www.edusn-admin.com",
     "logo": "edusn.svg",
     "languages": ["Vue.js", "Laravel"],
     "showImg": false,
     "showLink": false,
-    "title": "School Management Application",
+    "title": "Financial Management Application",
     "type": "admin",
     "platform": "Admin Website & Mobile App"
   },

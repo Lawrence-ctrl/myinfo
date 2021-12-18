@@ -14,13 +14,13 @@
   {
     "id": 2,
     "label": 2,
-    "name": "EDUSN – International School",
+    "name": "EDUSN – Digital School",
     "value": "edusn",
-    "link": "https://www.edusn-admin.com",
+    "link": "https://apps.apple.com/us/app/edusn/id1600056409",
     "logo": "edusn.svg",
     "languages": ["Ionic", "Laravel"],
-    "title": "School Management Application",
+    "title": "Financial Management Application",
     "showImg": false,
-    "uploaded": false
+    "uploaded": true
   }
 ]
