@@ -49,24 +49,12 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import { ref } from 'vue'
 import ios from '../../json/ios.json';
 import LightBox from '../light-boxes.vue';
-export default {
-  components: {
-    LightBox
-  },
-  setup () {
-    async function goto(link) {
-      window.open(link, '_blank');
-    }
-
-    return {
-      goto,
-      ios: ios,
-      slide: ref('jobsharmal'),
-    }
-  }
+const goto = async(link) => {
+  window.open(link, '_blank');
 }
+const slide = ref('jobsharmal');
 </script>

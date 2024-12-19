@@ -15,27 +15,21 @@
         </q-avatar>
         <div class="q-mt-md text-center text-black" style="min-width: 300px">
           <div class="text-h5 text-weight-bold q-mb-md">{{ app.name }}</div>
-
           <div class="text-body2  q-mb-lg">
             {{ app.title }}
           </div>
-
           <div class="languages q-mb-lg">
             <q-chip color="primary" outline class="text-primary" v-for="lang in app.languages" :key="lang">
               {{ lang }}
             </q-chip>
           </div>
-
           <q-btn no-caps color="primary" class="q-mt-md q-mr-sm" @click="goto(app.link)" v-if="app.uploaded">
             Download App
           </q-btn>
-
           <q-btn no-caps color="primary" class="q-mt-md q-mr-sm"  v-if="!app.uploaded">
             Pending ...
           </q-btn>
-
           <light-box v-if="app.showImg" :link="app.link" :images="app.images" />
-
         </div>
       </q-carousel-slide>
     </q-carousel>
@@ -49,24 +43,12 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import { ref } from 'vue'
 import android from '../../json/android.json';
 import LightBox from '../light-boxes.vue';
-export default {
-  components: {
-    LightBox
-  },
-  setup () {
-    async function goto(link) {
-      window.open(link, '_blank');
-    }
-
-    return {
-      goto,
-      android: android,
-      slide: ref('jobsharmal'),
-    }
-  }
+const slide = ref('jobsharmal');
+const goto = async(link) => {
+  window.open(link, '_blank');
 }
 </script>

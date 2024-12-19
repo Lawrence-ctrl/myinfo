@@ -6,24 +6,24 @@
           <div class="col-sm-12 col-md-6" :class="$q.screen.lt.sm ? 'q-mb-xl': ''">
             <div class="hello bg-primary">Hello I'm</div>
             <div class="name">THUTA YAR MOE</div>
-            <div class="profession">Web Developer</div>
+            <div class="profession">Full Stack Developer</div>
             <div class="text-body1 q-mb-sm my-info">
               <q-icon name="mail" size="sm" class="q-mr-md" color="primary"/>
               <label>thutayarmoe97@gmail.com</label>
             </div>
             <div class="text-body1 q-mb-sm my-info">
               <q-icon name="phone" size="sm" class="q-mr-md" color="primary"/>
-              <label>+959 972 089 188</label>
+              <label>+959 972 089 188, +63 906 015 8406</label>
             </div>
             <div class="text-body1 q-mb-sm my-info">
               <q-icon name="place" size="sm" class="q-mr-md" color="primary"/>
-              <label>No.(25), Bozinyaw 3rd street, 30 Quarter, North Dagon, Yangon.</label>
+              <label>Unit 4424 The Baecon Condo Arnaiz Tower Chino Roces Ave Makati City</label>
             </div>
           </div>
           <div class="col-md-6 col-sm-12">
             <div class="profile">
               <q-avatar>
-                <img src="mine.jpg" class="profile-image">
+                <img src="thutayarmoe.jpeg" class="profile-image">
               </q-avatar>
             </div>
           </div>
@@ -33,24 +33,35 @@
 
     <div class="about" ref="about">
       <div class="container">
-        <div class="text-h4 text-center text-weight-bolder q-pb-lg">“ About Me ”</div>
+        <!-- Section Title -->
+        <div class="text-h4 text-center text-weight-bolder q-pb-lg">
+          “ About Me ”
+        </div>
+
+        <!-- Row to Center Content -->
         <div class="row items-center justify-center">
           <div class="col-12 col-sm-8">
-            <div class="text-body1">
-              Hi! I'm Thuta Yar Moe. I'm a Backend Developer.
-              I studied Information Technology and graduated with bachelor of engineering (IT) from Technological University (Hmawbi).
-              I'm very passionate and dedicated to my work. I enjoy every step of the development process, from discussion and collaboration.
-              I have many experiences in website and mobile application development. I am good at
-            </div>
-            <div class="languages q-py-md">
-              <q-chip square class="q-pa-md" size="md" color="primary" text-color="white">Vue.js</q-chip>
-              <q-chip square class="q-pa-md" size="md" color="primary" text-color="white">NuxtJS</q-chip>
-              <q-chip square class="q-pa-md" size="md" color="primary" text-color="white">Quasar</q-chip>
-              <q-chip square class="q-pa-md" size="md" color="primary" text-color="white">Laravel</q-chip>
-              <q-chip square class="q-pa-md" size="md" color="primary" text-color="white">PHP</q-chip>
-              <q-chip square class="q-pa-md" size="md" color="primary" text-color="white">MySQL</q-chip>
-              <q-chip square class="q-pa-md" size="md" color="primary" text-color="white">NGINX</q-chip>
-              <q-chip square class="q-pa-md" size="md" color="primary" text-color="white">Digital Ocean</q-chip>
+            <!-- Introduction Text -->
+            <div class="text-body1 q-mb-lg">
+              <p>
+                Hi, I’m <strong>Thuta Yar Moe</strong>, a passionate and dedicated
+                <strong>Backend Developer</strong> from Myanmar. I earned my Bachelor of Engineering in
+                Information Technology from <strong>Technological University (Hmawbi)</strong>.
+              </p>
+              <p>
+                I am currently based in the Philippines, where I work as a
+                <strong>Senior Backend Developer</strong>. My passion lies in creating efficient and scalable solutions,
+                and I thrive in collaborative environments where ideas transform into impactful projects.
+              </p>
+              <p>
+                Over the years, I’ve gained extensive experience in website and mobile application development,
+                completing numerous projects that blend functionality and design. I specialize in using a variety
+                of tools and frameworks, including <strong>Docker</strong>, <strong>Nginx</strong>,
+                <strong>React</strong>, <strong>React Native</strong>, <strong>Vue</strong>, <strong>Quasar</strong>,
+                <strong>Laravel</strong>, <strong>PHP</strong>, <strong>MySQL</strong>, <strong>FastAPI</strong>, and <strong>Python</strong>.
+                I am committed to continuous learning and applying my skills to deliver high-quality solutions
+                that meet user needs.
+              </p>
             </div>
           </div>
         </div>
@@ -61,29 +72,61 @@
       <div class="container">
         <div class="text-h4 text-center text-weight-bolder q-pb-xl">What I Do</div>
         <div class="row justify-center q-col-gutter-lg">
+
+          <!-- Web Development Section -->
           <div class="col-12 col-sm-8 col-md-6">
-            <q-card class="what-i-do text-center shadow-9">
+            <q-card class="what-i-do text-center shadow-9 hover-effect">
               <q-card-section>
-                <q-avatar size="60px" rounded class="q-mr-sm">
-                  <img src="~/assets/website3.png" />
+                <q-avatar size="70px" rounded class="q-mr-sm">
+                  <img src="~/assets/website3.png" alt="Web Development Icon" />
                 </q-avatar>
-                <div v-if="$q.screen.lt.md">
-                  Web Development
-                </div>
-                <span v-else>Web Development</span>
+                <div class="text-h5 text-weight-bold q-mt-md">Web Development</div>
+                <p class="q-mt-sm">
+                  Crafting dynamic, responsive, and secure websites tailored to your needs. My expertise includes integrating:
+                  <ul class="text-left q-mt-lg">
+                    <li>Payment Gateways (Stripe, PayPal, etc.)</li>
+                    <li>Single Sign-On (SSO) for seamless authentication</li>
+                  </ul>
+                </p>
               </q-card-section>
             </q-card>
           </div>
+
+          <!-- Mobile Development Section -->
           <div class="col-12 col-sm-8 col-md-6">
-            <q-card class="what-i-do text-center shadow-9">
+            <q-card class="what-i-do text-center shadow-9 hover-effect">
               <q-card-section>
-                <q-avatar size="60px" rounded class="q-mr-sm">
-                  <img src="~/assets/app.png" style="object-fit:contain"/>
+                <q-avatar size="70px" rounded class="q-mr-sm">
+                  <img src="~/assets/app.png" alt="Mobile Development Icon" style="object-fit:contain"/>
                 </q-avatar>
-                <div v-if="$q.screen.lt.md">
-                  App Development
-                </div>
-                <span v-else>App Development</span>
+                <div class="text-h5 text-weight-bold q-mt-md">Mobile Development</div>
+                <p class="q-mt-sm">
+                  Building robust backend solutions for mobile applications. I ensure:
+                  <ul class="text-left q-mt-lg">
+                    <li>Secure data handling with optimized APIs</li>
+                    <li>Integration with third-party tools (e.g., push notifications, in-app purchases)</li>
+                    <li>Scalable and efficient backend architecture</li>
+                  </ul>
+                </p>
+              </q-card-section>
+            </q-card>
+          </div>
+
+          <!-- API Development Section -->
+          <div class="col-12">
+            <q-card class="what-i-do text-center shadow-9 hover-effect">
+              <q-card-section>
+                <q-avatar size="70px" rounded class="q-mr-sm">
+                  <img src="~/assets/app.png" alt="API Development Icon" style="object-fit:contain"/>
+                </q-avatar>
+                <div class="text-h5 text-weight-bold q-mt-md">API Development</div>
+                <p class="q-mt-sm">
+                  I design and implement APIs tailored to your business needs. Features include:
+                  <ul class="text-left q-mt-lg">
+                    <li>Optimized performance for high-traffic applications</li>
+                    <li>Advanced data security and encryption protocols</li>
+                  </ul>
+                </p>
               </q-card-section>
             </q-card>
           </div>
@@ -97,7 +140,7 @@
       </div>
     </div>
 
-    <div class="skills">
+    <!-- <div class="skills">
       <div class="container">
         <div class="row justify-center q-col-gutter-x-lg">
           <div class="col-12 col-sm-8 col-md-5 q-mx-md q-mb-lg">
@@ -130,59 +173,64 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <div class="work-experience">
       <div class="container">
         <div class="row justify-center q-col-gutter-x-lg">
           <div class="col-12 col-sm-8 col-md-6 q-mb-lg">
             <div class="text-h4 text-weight-bolder text-center q-pb-xl">Work Experience</div>
-
-            <q-card class="q-mb-lg q-pa-sm shadow-5">
-              <q-card-section>
-                <div class="text-h6 text-primary text-weight-bolder">YCDC</div>
-                <ul>
-                  <li class="text-weight-bold">Junior Web Developer</li>
-                  <li class="text-weight-bold">June 2019 - July 2019 (Internship)</li>
-                </ul>
-              </q-card-section>
-            </q-card>
-
-            <q-card class="q-mb-lg q-pa-sm shadow-5">
-              <q-card-section>
-                <div class="text-h6 text-primary text-weight-bolder">CGM</div>
-                <ul>
-                  <li class="text-weight-bold">Junior Web Developer</li>
-                  <li class="text-weight-bold">Feb 2020 - May 2020 (Quit because of COVID 19)</li>
-                </ul>
-              </q-card-section>
-            </q-card>
-
-            <q-card class="q-mb-lg q-pa-sm shadow-5">
-              <q-card-section>
-                <div class="text-h6 text-primary text-weight-bolder">Datalink</div>
-                 <ul>
-                  <li class="text-weight-bold">Web Developer</li>
-                  <li class="text-weight-bold">June 2020 - July 2021</li>
-                </ul>
-              </q-card-section>
-            </q-card>
-
+            <q-timeline>
+              <q-timeline-entry
+                v-for="(experience, index) in workExperience"
+                :key="index"
+                :title="experience.company"
+                :subtitle="experience.position"
+                :body="experience.duration"
+                icon="work"
+                color="primary"
+              >
+                <div class="text-weight-bold">{{ experience.position }}</div>
+                <div class="text-weight-bold">{{ experience.duration }}</div>
+              </q-timeline-entry>
+            </q-timeline>
           </div>
+
           <div class="col-12 col-sm-8 col-md-6">
             <div class="text-h4 text-weight-bolder text-center q-pb-xl">Education</div>
-
-            <q-card class="q-mb-lg q-pa-sm shadow-5">
-              <q-card-section>
-                <div class="text-h6 text-primary text-weight-bolder">Technological University (HMAWBI)</div>
-                <ul>
-                  <li class="text-weight-bold">2013 - 2019</li>
-                  <li class="text-weight-bold">Bachelor of Technology (IT)</li>
-                  <li class="text-weight-bold">Bachelor of Engineering (IT)</li>
-                </ul>
-              </q-card-section>
-            </q-card>
+            <q-timeline>
+              <q-timeline-entry
+                v-for="(education, index) in education"
+                :key="index"
+                :title="education.institution"
+                :subtitle="education.degree"
+                :body="education.duration"
+                icon="school"
+                color="primary"
+              >
+                <div class="text-weight-bold">{{ education.degree }}</div>
+              </q-timeline-entry>
+            </q-timeline>
           </div>
+
+          <!-- <div class="col-12 col-sm-8 col-md-6 q-mb-lg">
+            <div class="text-h4 text-weight-bolder text-center q-pb-xl">Certificates</div>
+            <q-timeline>
+              <q-timeline-entry
+                v-for="(certificate, index) in certificates"
+                :key="index"
+                :title="certificate.title"
+                :subtitle="certificate.issuer"
+                :body="certificate.date"
+                icon="verified"
+                color="primary"
+              >
+                <div class="text-weight-bold">{{ certificate.title }}</div>
+                <div class="text-weight-bold">{{ certificate.issuer }}</div>
+                <div class="text-weight-bold">{{ certificate.date }}</div>
+              </q-timeline-entry>
+            </q-timeline>
+          </div> -->
         </div>
       </div>
     </div>
@@ -204,11 +252,14 @@
             <div class="text-subtitle1 text-weight-bold text-white q-mt-lg text-center">
               +959 972 089 188
             </div>
+            <div class="text-subtitle1 text-weight-bold text-white text-center">
+              +63 906 015 8406
+            </div>
           </div>
           <div class="col-12 col-sm-8 col-md-4 text-center">
             <q-icon size="lg" color="white" name="place"/>
             <div class="text-subtitle1 text-weight-bold text-white q-mt-lg text-center">
-              No.(25), Bozinyaw 3rd street, 30 Quarter, North Dagon, Yangon.
+              Unit 4424 The Baecon Condo Arnaiz Tower Chino Roces Ave Makati City
             </div>
           </div>
         </div>
@@ -220,21 +271,18 @@
 
     <q-toolbar class="bg-primary text-dark text-center q-pa-lg">
       <div class="container">
-        <q-row>
-          <div class="text-dark text-subtitle1 text-weight-bold text-white">All rights reserved. Thuta Yar Moe</div>
-          <q-icon @click="goto('facebook')" name="facebook" size="md" color="white" class="q-ma-md icons"/>
-          <q-icon @click="goto('phone')" name="phone" size="md" color="white" class="q-ma-md icons"/>
-          <q-icon @click="goto('mail')" name="mail" size="md" color="white" class="q-ma-md icons"/>
-        </q-row>
+        <div class="text-dark text-subtitle1 text-weight-bold text-white">All rights reserved. Thuta Yar Moe</div>
+        <!-- <q-icon @click="goto('facebook')" name="facebook" size="md" color="white" class="q-ma-md icons"/>
+        <q-icon @click="goto('phone')" name="phone" size="md" color="white" class="q-ma-md icons"/>
+        <q-icon @click="goto('mail')" name="mail" size="md" color="white" class="q-ma-md icons"/> -->
       </div>
     </q-toolbar>
-
   </q-page>
 </template>
 
 <script>
 import Projects from 'src/components/projects.vue';
-import { defineComponent, ref, watch } from 'vue';
+import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'PageIndex',
@@ -246,6 +294,52 @@ export default defineComponent({
   },
   data() {
     return {
+      workExperience: [
+        {
+          company: 'Datalink',
+          position: 'Junior Web Developer',
+          duration: 'June 2019 - July 2021'
+        },
+        {
+          company: 'Spiceworks Myanmar',
+          position: 'Backend Developer',
+          duration: 'Jan 2022 - Present'
+        },
+        {
+          company: 'WIT Lab',
+          position: 'Senior Backend Developer',
+          duration: 'Jan 2022 - Present'
+        }
+      ],
+      education: [
+        {
+          institution: 'Technological University (HMAWBI)',
+          degree: 'Bachelor of Technology (IT)',
+          duration: '2013 - 2017'
+        },
+        {
+          institution: 'Technological University (HMAWBI)',
+          degree: 'Bachelor of Engineering (IT)',
+          duration: '2017 - 2019'
+        }
+      ],
+      certificates: [
+        {
+          title: 'Certified Web Developer',
+          issuer: 'FreeCodeCamp',
+          date: 'January 2020'
+        },
+        {
+          title: 'JavaScript Algorithms and Data Structures',
+          issuer: 'Coursera',
+          date: 'March 2021'
+        },
+        {
+          title: 'Full-Stack Web Development with React',
+          issuer: 'Coursera',
+          date: 'July 2021'
+        }
+      ],
       technical: [
         { id: 1, name: 'Vue.js', percent: 0.8 },
         { id: 2, name: 'Nuxt JS', percent: 0.7 },
@@ -364,7 +458,6 @@ export default defineComponent({
       height: 300px;
       margin: auto;
       display: block;
-      border: 3px solid #2e8eaf;
       overflow: hidden;
       box-shadow: 0px 3px 6px rgba(0,0,0,0.16);
     }

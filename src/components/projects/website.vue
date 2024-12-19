@@ -89,27 +89,15 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import { ref } from 'vue'
 import websites from '../../json/websites.json';
 import LightBox from '../light-boxes.vue';
-export default {
-  components: {
-    LightBox
-  },
-  setup () {
-    async function goto(link) {
-      window.open(link, '_blank');
-    }
-
-    return {
-      goto,
-      websites: websites,
-      autoplay: ref(false),
-      imageSlide: ref(1),
-      slide: ref('jobsharmal'),
-    }
-  }
+const goto = async(link) => {
+  window.open(link, '_blank');
 }
+const slide = ref('jobsharmal');
+const imageSlide = ref(1);
+const autoplay = ref(false);
 </script>
 
