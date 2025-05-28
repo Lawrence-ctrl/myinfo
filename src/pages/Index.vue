@@ -342,7 +342,7 @@ export default defineComponent({
           link: 'https://certificates.dev/vuejs/certificates/9ee45070-7f33-4f3a-8867-afbc1b310067'
         },
         {
-          titile: 'Certified Senior Vue.js Developer',
+          title: 'Certified Senior Vue.js Developer',
           issuer: 'certificates.dev',
           date: 'May 27, 2025',
           link: 'https://certificates.dev/vuejs/certificates/9f0332d7-e7ab-46b9-9c77-293c4144fb84'
