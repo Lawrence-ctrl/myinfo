@@ -14,30 +14,6 @@
   {
     "id": 2,
     "label": 2,
-    "name": "Treasure",
-    "value": "treasure",
-    "link": "https://treasure-d1d31.firebaseapp.com/home",
-    "logo": "treasure.png",
-    "languages": ["Angular", "Laravel"],
-    "showImg": false,
-    "showLink": true,
-    "title": "Real Estate Application"
-  },
-  {
-    "id": 3,
-    "label": 3,
-    "name": "MM Biz Info",
-    "value": "mmbizinfo",
-    "link": "https://www.mmbizinfo.com",
-    "logo": "mmbizinfo.png",
-    "languages": ["Vue.js", "Chart JS", "Laravel"],
-    "showImg": false,
-    "showLink": true,
-    "title": "Data for Traders Application"
-  },
-  {
-    "id": 4,
-    "label": 4,
     "name": "MM Tamil Matrimony",
     "value": "mmtamilmatrimony",
     "link": "https://www.mmtamilmatrimony.com",
@@ -46,44 +22,5 @@
     "showImg": false,
     "showLink": true,
     "title": "Dating Application"
-  },
-  {
-    "id": 5,
-    "label": 5,
-    "name": "Victory – International School",
-    "value": "victory",
-    "logo": "victory.png",
-    "link": "https://www.victorymm.com",
-    "languages": ["NuxtJS", "Laravel"],
-    "showImg": false,
-    "showLink": true,
-    "title": "School Management Application"
-  },
-  {
-    "id": 6,
-    "label": 6,
-    "name": "EDUSN – Digital School",
-    "value": "edusn",
-    "link": "https://www.edusn-admin.com",
-    "logo": "edusn.svg",
-    "languages": ["Vue.js", "Laravel"],
-    "showImg": false,
-    "showLink": false,
-    "title": "Financial Management Application",
-    "type": "admin",
-    "platform": "Admin Website & Mobile App"
-  },
-  {
-    "id": 7,
-    "label": 7,
-    "name": "BEHS KanTharYar",
-    "value": "behs",
-    "link": "https://www.edusn-admin.com",
-    "logo": "behs.png",
-    "languages": ["Vue.js", "Laravel"],
-    "showImg": true,
-    "showLink": false,
-    "images": ["behs/1.png","behs/2.png","behs/3.png"],
-    "title": "School Exam Application"
   }
 ]

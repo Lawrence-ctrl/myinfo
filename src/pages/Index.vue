@@ -17,7 +17,7 @@
             </div>
             <div class="text-body1 q-mb-sm my-info">
               <q-icon name="place" size="sm" class="q-mr-md" color="primary"/>
-              <label>Unit 4424 The Baecon Condo Arnaiz Tower Chino Roces Ave Makati City</label>
+              <label>Unit 4424 The Baecon Condo Arnaiz Tower Chino Roces Ave Makati City, Philippines</label>
             </div>
           </div>
           <div class="col-md-6 col-sm-12">
@@ -190,8 +190,8 @@
                 icon="work"
                 color="primary"
               >
-                <div class="text-weight-bold">{{ experience.position }}</div>
-                <div class="text-weight-bold">{{ experience.duration }}</div>
+                <!-- <div class="text-weight-bold">{{ experience.position }}</div>
+                <div class="text-weight-bold">{{ experience.duration }}</div> -->
               </q-timeline-entry>
             </q-timeline>
           </div>
@@ -208,30 +208,41 @@
                 icon="school"
                 color="primary"
               >
-                <div class="text-weight-bold">{{ education.degree }}</div>
+                <!-- <div class="text-weight-bold">{{ education.degree }}</div> -->
               </q-timeline-entry>
             </q-timeline>
           </div>
+        </div>
+      </div>
+    </div>
 
-          <!-- <div class="col-12 col-sm-8 col-md-6 q-mb-lg">
-            <div class="text-h4 text-weight-bolder text-center q-pb-xl">Certificates</div>
+    <div class="certificates" ref="certificates">
+      <div class="container">
+        <div class="col-12 col-sm-8 col-md-6 q-mb-lg">
+          <div class="text-h4 text-weight-bolder text-center q-pb-xl">Certificates</div>
             <q-timeline>
               <q-timeline-entry
                 v-for="(certificate, index) in certificates"
                 :key="index"
-                :title="certificate.title"
                 :subtitle="certificate.issuer"
                 :body="certificate.date"
                 icon="verified"
                 color="primary"
               >
-                <div class="text-weight-bold">{{ certificate.title }}</div>
+              <template v-slot:title>
+                <div
+                  class="cursor-pointer text-weight-bold text-underline"
+                  @click="goto('certificate', certificate.link)"
+                >
+                  {{ certificate.title }}
+                </div>
+              </template>
+                <!-- <div class="text-weight-bold">{{ certificate.title }}</div>
                 <div class="text-weight-bold">{{ certificate.issuer }}</div>
-                <div class="text-weight-bold">{{ certificate.date }}</div>
+                <div class="text-weight-bold">{{ certificate.date }}</div> -->
               </q-timeline-entry>
             </q-timeline>
-          </div> -->
-        </div>
+          </div>
       </div>
     </div>
 
@@ -259,7 +270,7 @@
           <div class="col-12 col-sm-8 col-md-4 text-center">
             <q-icon size="lg" color="white" name="place"/>
             <div class="text-subtitle1 text-weight-bold text-white q-mt-lg text-center">
-              Unit 4424 The Baecon Condo Arnaiz Tower Chino Roces Ave Makati City
+              Unit 4424 The Baecon Condo Arnaiz Tower Chino Roces Ave Makati City, Philippines
             </div>
           </div>
         </div>
@@ -296,19 +307,19 @@ export default defineComponent({
     return {
       workExperience: [
         {
-          company: 'Datalink',
+          company: 'CGM Golden Land',
           position: 'Junior Web Developer',
-          duration: 'June 2019 - July 2021'
+          duration: 'Feb 2020 - May 2020'
         },
         {
-          company: 'Spiceworks Myanmar',
-          position: 'Backend Developer',
-          duration: 'Jan 2022 - Present'
+          company: 'Datalink',
+          position: 'Web Developer',
+          duration: 'June 2020 - July 2021'
         },
         {
-          company: 'WIT Lab',
-          position: 'Senior Backend Developer',
-          duration: 'Jan 2022 - Present'
+          company: 'Spiceworks Myanmar & WIT Lab (Philippines)',
+          position: 'Senior Full-Stack Developer',
+          duration: 'Jan 2022 - present'
         }
       ],
       education: [
@@ -325,19 +336,16 @@ export default defineComponent({
       ],
       certificates: [
         {
-          title: 'Certified Web Developer',
-          issuer: 'FreeCodeCamp',
-          date: 'January 2020'
+          title: 'Certified Mid-Level Vue.js Developer',
+          issuer: 'certificates.dev',
+          date: 'May 12, 2025',
+          link: 'https://certificates.dev/vuejs/certificates/9ee45070-7f33-4f3a-8867-afbc1b310067'
         },
         {
-          title: 'JavaScript Algorithms and Data Structures',
-          issuer: 'Coursera',
-          date: 'March 2021'
-        },
-        {
-          title: 'Full-Stack Web Development with React',
-          issuer: 'Coursera',
-          date: 'July 2021'
+          titile: 'Certified Senior Vue.js Developer',
+          issuer: 'certificates.dev',
+          date: 'May 27, 2025',
+          link: 'https://certificates.dev/vuejs/certificates/9f0332d7-e7ab-46b9-9c77-293c4144fb84'
         }
       ],
       technical: [
@@ -364,10 +372,11 @@ export default defineComponent({
       }
     },
 
-    goto(val) {
-      if (val == 'facebook') window.open('https://www.facebook.com/thuta.yarmoe', '_blank');
-      if (val == 'phone') window.open('tel:+959972089188', '_blank');
-      if (val == 'mail') window.open('https://mail.google.com/mail/?view=cm&fs=1&to=thutayarmoe@icloud.com', '_blank');
+    goto(val, link = null) {
+      if (val === 'facebook') window.open('https://www.facebook.com/thuta.yarmoe', '_blank');
+      if (val === 'phone') window.open('tel:+959972089188', '_blank');
+      if (val === 'mail') window.open('https://mail.google.com/mail/?view=cm&fs=1&to=thutayarmoe@icloud.com', '_blank');
+      if (val === 'certificate') window.open(link)
     }
   },
   watch: {
@@ -393,7 +402,7 @@ export default defineComponent({
     background: #fff;
   }
 
-  .whatido, .skills {
+  .whatido, .skills, .certificates {
     width: 100%;
     padding: 90px 0px;
     background: #efefef;
@@ -516,5 +525,9 @@ export default defineComponent({
 
   .profile-image {
     object-fit: cover;
+  }
+
+  .text-underline {
+    text-decoration: underline;
   }
 </style>
